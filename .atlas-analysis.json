@@ -1,0 +1,110 @@
+{
+  "projectType": "sdk-library",
+  "projectName": "Motus",
+  "projectDescription": "An open-source agent serving framework that lets you build, run, and deploy AI agents locally or to the cloud with a parallel task-graph runtime.",
+  "theme": "luma",
+  "primaryColor": "#140c0c",
+  "lightColor": "#7c7c7c",
+  "darkColor": "#c0c0c0",
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "Documentation",
+        "groups": [
+          {
+            "group": "Get Started",
+            "pages": [
+              "introduction",
+              "getting-started/installation",
+              "getting-started/quickstart",
+              "getting-started/configuration"
+            ]
+          },
+          {
+            "group": "Core Concepts",
+            "pages": [
+              "concepts/agents",
+              "concepts/tools",
+              "concepts/runtime",
+              "concepts/models",
+              "concepts/memory"
+            ]
+          },
+          {
+            "group": "Guides",
+            "pages": [
+              "guides/serving",
+              "guides/deployment",
+              "guides/tracing",
+              "guides/guardrails",
+              "guides/mcp-integration",
+              "guides/multi-agent"
+            ]
+          },
+          {
+            "group": "Integrations",
+            "pages": [
+              "integrations/openai-agents",
+              "integrations/anthropic-sdk",
+              "integrations/google-adk"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Reference",
+        "groups": [
+          {
+            "group": "CLI",
+            "pages": [
+              "reference/cli-serve",
+              "reference/cli-deploy"
+            ]
+          },
+          {
+            "group": "REST API",
+            "pages": [
+              "reference/api-sessions",
+              "reference/api-messages",
+              "reference/api-webhooks"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "keyFeatures": [
+    "ReActAgent with multi-provider LLM support (OpenAI, Anthropic, Gemini, OpenRouter)",
+    "Automatic parallel task-graph runtime via @agent_task decorator",
+    "One-command local serving and cloud deployment with motus serve / motus deploy",
+    "MCP server integration for external tool consumption",
+    "Docker sandbox for isolated code execution",
+    "Automatic distributed tracing with HTML viewer and OpenTelemetry export",
+    "Drop-in compatibility with OpenAI Agents SDK, Anthropic SDK, and Google ADK",
+    "Prompt caching, structured output, and guardrails built in"
+  ],
+  "publicApiSurface": [
+    "ReActAgent",
+    "@agent_task",
+    "@tool / @tools",
+    "FunctionTool",
+    "MCPSession",
+    "OpenAIChatClient / AnthropicChatClient / GeminiChatClient / OpenRouterChatClient",
+    "BasicMemory / CompactionMemory",
+    "AgentServer",
+    "motus serve start / chat / health / create / sessions / get / delete / messages / send",
+    "motus deploy",
+    "motus login",
+    "resolve()",
+    "CachePolicy",
+    "ReasoningConfig",
+    "ServableAgent protocol",
+    "HookManager (register_hook, register_task_hook, register_tool_hook)",
+    "POST /sessions",
+    "GET /sessions/{id}",
+    "POST /sessions/{id}/messages",
+    "GET /sessions/{id}/messages",
+    "DELETE /sessions/{id}",
+    "GET /health"
+  ]
+}
